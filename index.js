@@ -16,9 +16,7 @@ function logDriversByHometown(drivers, location) {
 function driversByRevenue(drivers) {
     const driverMap = drivers.slice()
 
-    return driverMap.sort(function (a ,b) {
-        return a.revenue - b.revenue
-    })
+    return driverMap.sort(function (a ,b) { return a.revenue - b.revenue })
 }
 
 function driversByName(drivers) {
@@ -26,15 +24,11 @@ function driversByName(drivers) {
 }
 
 function totalRevenue(drivers) {
-    return drivers.reduce(function (accumulator, driver) {
-        return accumulator + driver.revenue
-    } ,0)
+    return drivers.reduce(function (accumulator, driver) { return accumulator + driver.revenue } ,0) 
 }
 
 function averageRevenue(drivers) {
-    const revenue = drivers.reduce(function (accumulator, driver) {
-        return accumulator + driver.revenue
-    }, 0)
+    const revenue = drivers.reduce(function (accumulator, driver) {return accumulator + driver.revenue }, 0)
 
     return revenue / drivers.length
 }
